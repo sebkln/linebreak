@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("linebreak","de",{label_shy:"Bedingter Zeilenumbruch MIT Trennstrich (&amp;shy;)",label_wbr:"Bedingter Zeilenumbruch OHNE Trennstrich (<wbr>)"});
