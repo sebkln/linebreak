@@ -21,7 +21,7 @@ Both line breaks are **only** applied if the word is too long for the surroundin
 
 Please note that this was primarily created to use with the CKEditor implementation for TYPO3. If it doesn't work in other instances of CKEditor, please feel free to create a pull request with the required changes.
 
-Currently this limitation exists: The wrapping `<span>`element for `&shy;` entities has to be removed by `lib.parseFunc_RTE (as shown below). The plugin itself does not provide this (yet).
+Currently this limitation exists: The wrapping `<span>`element for `&shy;` entities has to be removed by `lib.parseFunc_RTE` (as shown below). The plugin itself does not provide this (yet).
 
 ## Browser compatibility
 
