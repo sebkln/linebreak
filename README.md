@@ -82,6 +82,16 @@ processing:
     - wbr
 ```
 
+In case you use `toolbar` instead of `toolbarGroups`, the syntax is as follows:
+
+```yaml
+editor:
+  config:
+    toolbar:
+      # - { Your other toolbar buttons here }
+      - [ 'ShyEntity', 'WbrTag' ]
+```
+
 ### 3) Update frontend rendering
 
 Add the following lines to your **TypoScript setup**:
