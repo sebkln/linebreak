@@ -60,11 +60,10 @@ editor:
       resource: "EXT:site_package/Resources/Public/JavaScript/Plugins/linebreak/plugin.js"
 
   config:
-    stylesSet:
-      # The following line allows <span> elements with the 'shy' class.
-      # The class is used only inside the CKEditor to unhide the &shy; entity for editors!
-      # The whole <span> element is removed when processing the content for the Frontend.
-      - { name: "span shy", element: "span", attributes: { 'class': 'shy' } }
+    # The following line allows <span> elements with the 'shy' class.
+    # The class is used only inside the CKEditor to unhide the &shy; entity for editors!
+    # The whole <span> element is removed when processing the content for the Frontend.
+    extraAllowedContent: "*(*)[data-*]; span(shy)"
 
     # Add the linebreak buttons to the toolbar:
     toolbarGroups:
