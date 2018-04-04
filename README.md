@@ -94,8 +94,10 @@ editor:
 ### 3) Update frontend rendering
 
 Add the following lines to your **TypoScript setup**:
+
 ```
-// Allow <wbr> tag in RTE:
+// Allow <wbr> tag rendering in frontend:
+lib.parseFunc.allowTags := addToList(wbr)
 lib.parseFunc_RTE.allowTags := addToList(wbr)
 
 // Remove any 'shy' classes from <span> elements:
@@ -104,6 +106,9 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.HTMLparser.tags.span.fixAttrib.class.removeI
 // Remove all <span> elements which have no attribute:
 lib.parseFunc_RTE.nonTypoTagStdWrap.HTMLparser.rmTagIfNoAttrib = span
 ```
+
+It's necessary to allow the `<wbr>` tag in both `parseFunc` functions. Otherwise the tag will not be rendered properly if inside a list item!
+
 
 ## Additional Notes
 
