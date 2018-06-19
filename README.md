@@ -105,6 +105,17 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.HTMLparser.tags.span.fixAttrib.class.removeI
 
 // Remove all <span> elements which have no attribute:
 lib.parseFunc_RTE.nonTypoTagStdWrap.HTMLparser.rmTagIfNoAttrib = span
+
+// The same is needed for all occurrences inside lists:
+lib.parseFunc_RTE.externalBlocks {
+    ul {
+        callRecursive = 1
+        HTMLparser = 1
+        HTMLparser.tags.span.fixAttrib.class.removeIfEquals = shy
+        HTMLparser.rmTagIfNoAttrib = span
+    }
+    ol < .ul
+}
 ```
 
 It's necessary to allow the `<wbr>` tag in both `parseFunc` functions. Otherwise the tag will not be rendered properly if inside a list item!
