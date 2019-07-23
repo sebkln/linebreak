@@ -108,11 +108,15 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.HTMLparser.rmTagIfNoAttrib = span
 
 // The same is needed for all occurrences inside lists:
 lib.parseFunc_RTE.externalBlocks {
-    ul {
+    ul.stdWrap {
         callRecursive = 1
         HTMLparser = 1
-        HTMLparser.tags.span.fixAttrib.class.removeIfEquals = shy
-        HTMLparser.rmTagIfNoAttrib = span
+        HTMLparser {
+            tags.span.fixAttrib.class.removeIfEquals = shy
+            rmTagIfNoAttrib = span
+            keepNonMatchedTags = 1
+        }
+
     }
     ol < .ul
 }
